@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <title>QR Code Generator @ Ahmed Zienhom</title>
+    </head>
+    <body class="container">
+        
+        <section class="flex items-center w-100">
+            <input class="b-0 p-0 h-4 dark w-30" type="color"/>
+            <input class="b-0 p-0 h-4 light w-30" value="#ffffff" type="color"/>
+            <select class="sizes w-40">
+                <option value="100">100 * 100</option>
+                <option value="200">200 * 200</option>
+                <option value="300">300 * 300</option>
+                <option selected value="400">400 * 400</option>
+                <option value="500">500 * 500</option>
+                <option value="600">600 * 600</option>
+                <option value="700">700 * 700</option>
+                <option value="800">800 * 800</option>
+                <option value="900">900 * 900</option>
+                <option value="1000">1000 * 1000</option>
+            </select>
+        </section>
+        <input type="text" class="QR-text" placeholder="Enter QR Text">
+
+        <div id="qr-code"></div>
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRCode">
+                <span>DOWNLOAD</span>
+                <i class="fa fa-download"></i>
+            </a>
+            <a href="#" class="share btn">
+                <span>SHARE</span>
+                <i class="fa fa-share"></i>
+            </a>
+        </div>
+
+
+        <script src="JS/all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

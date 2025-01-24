@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+.h-4 {
+    height: 45px;
+}
+
+.sizes {
+    height: 45px;
+}
+
+.items-center{
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.items-center > * {
+    display: block;
+    outline: none;
+}
+
+.w-30 {
+    width: 30%;
+    margin: 0;
+}
+.w-40 {
+    width: 40%;
+}
+
+.container {
+    max-width: 50%;
+    margin: auto;
+    height: 100vh;
+    background-color: #181b29;
+}
+
+.action-container {
+    margin-top: 12px;
+}
+
+.flex {
+    display: flex;
+}
+.b-0 {
+    border: none;
+}
+.p-0 {
+    padding-inline: 0;
+    padding-block: 0;
+    padding: 0;
+}
+
+.sizes {
+    color: white;
+    background-color: #181b29;
+    border: 1px solid #414866;
+    border-radius: 4px;
+}
+
+.QR-text {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    background-color: #181b29;
+    border: 1px solid #414866;
+    border-radius: 4px;
+    margin: 0.5rem 0 1rem 0;
+    color: white;
+    outline: none;
+}
+
+.QR-text::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+.QR-code {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414866 ;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background: darkblue;
+    padding-block: 12px;
+    padding-inline: 35px;
+    margin: 5px;
+    border-radius: 7.5px;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: darkblue;
+    background-color: #fff;
+}
+
+
+
+@media (max-width: 712px) {
+    .container {
+        max-width: 100%;
+    }
+    .QR-code {
+        width: 100%;
+    }
+    .action-container > * {
+        display: flex;
+        text-align: center;
+    }
+}
