@@ -10,8 +10,8 @@ const share = document.querySelector(".share");
 
 const DefaultURL = "https://github.com/ahmedZienhom";
 
-let ColorLight = "#fff",
-    ColorDark = "#000",
+let ColorLight = light.value,
+    ColorDark = dark.value,
     text = DefaultURL,
     size = 400;
 
@@ -19,11 +19,13 @@ let ColorLight = "#fff",
 generateQRCode();
 
 dark.addEventListener("input", (e) => {
+    console.log(e.target.value);
     ColorDark = e.target.value;
     generateQRCode();
 });
 light.addEventListener("input", (e) => {
 
+    console.log(e.target.value)
     ColorLight = e.target.value;
     generateQRCode();
 });
@@ -45,7 +47,7 @@ share.addEventListener("click", async () => {
     setTimeout(async () => {
         try {
             const base64url = await resolveDataUrl();
-            const blob = await((await fetch(base64url))).blob();
+            const blob = await(await fetch(base64url)) .blob();
             const file = new file([blob], "QRCode.png",{
                 type: blob.type
             });
@@ -80,8 +82,8 @@ function resolveDataUrl() {
         text,
         height:size,
         width:size,
-        ColorLight,
-        ColorDark
+        colorLight: ColorLight,
+        colorDark: ColorDark,
     });
     Download.href = await resolveDataUrl();
  }
